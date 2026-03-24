@@ -154,45 +154,6 @@
           <p>Your goal: craft a username payload that makes the query always return <code>TRUE</code>, granting you admin access without knowing the password.</p>
         </div>
 
-        <div class="sec-divider"><h3>Hints</h3></div>
-        <div class="hints-list">
-
-          <div class="hint-card">
-            <div class="hint-header" onclick="toggleHint(1)">
-              <span>💡 HINT 1</span>
-              <span class="hint-cost tag tag-green">−15 pts</span>
-              <span class="hint-toggle" id="hint1-toggle">▼ Reveal</span>
-            </div>
-            <div class="hint-body hidden" id="hint1-body">
-              Try entering <code>' OR 1=1-- -</code> in the username field with any password.
-            </div>
-          </div>
-
-          <div class="hint-card">
-            <div class="hint-header" onclick="toggleHint(2)">
-              <span>💡 HINT 2</span>
-              <span class="hint-cost tag tag-red">−35 pts</span>
-              <span class="hint-toggle" id="hint2-toggle">▼ Reveal</span>
-            </div>
-            <div class="hint-body hidden" id="hint2-body">
-              The raw query is:<br/><br/>
-              <code>SELECT * FROM users WHERE username='INPUT' AND password='...'</code><br/><br/>
-              Your payload breaks out of the string with <code>'</code>, adds <code>OR 1=1</code> to always be true, then comments out the rest with <code>-- -</code>.
-            </div>
-          </div>
-
-        </div>
-
-        <div class="sec-divider"><h3>Submit Flag</h3></div>
-        <div class="flag-submit-panel">
-          <div class="form-group flag-input-wrap">
-            <span class="flag-prefix">FlagVault{</span>
-            <input class="form-control" id="flag-input" type="text" placeholder="your_flag_here" autocomplete="off" />
-          </div>
-          <button class="btn btn-primary" onclick="submitFlag()" style="width:100%">&gt;_ SUBMIT FLAG</button>
-          <div class="submit-result" id="flag-result"></div>
-        </div>
-
         <div class="sec-divider"><h3>SQL Primer</h3></div>
         <div class="primer-block">
           <div class="primer-line p-comment">-- Normal query (login fails)</div>
